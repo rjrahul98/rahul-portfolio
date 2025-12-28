@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       animation: {
         blob: "blob 7s infinite",
+        "fade-in-up": "fade-in-up 0.6s ease-out",
       },
       keyframes: {
         blob: {
@@ -17,6 +18,22 @@ module.exports = {
           "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
           "100%": { transform: "translate(0px, 0px) scale(1)" },
         },
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      perspective: {
+        "1000": "1000px",
+      },
+      backgroundImage: {
+        "grid-slate-200": `linear-gradient(to right, rgb(226 232 240) 1px, transparent 1px), linear-gradient(to bottom, rgb(226 232 240) 1px, transparent 1px)`,
       },
     },
   },
